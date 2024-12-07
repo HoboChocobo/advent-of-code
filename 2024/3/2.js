@@ -1,5 +1,5 @@
 export default function(input) {
-    const instructions = [...input.join(' ').matchAll(/mul\((\d{1,3}),(\d{1,3})\)|do\(\)|don't\(\)/g)];
+    const instructions = [...input.join(" ").matchAll(/mul\((\d{1,3}),(\d{1,3})\)|do\(\)|don't\(\)/g)];
     let skip = false;
     let sum = 0;
     for (const [instruction, ...args] of instructions) {

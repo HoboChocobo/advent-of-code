@@ -22,7 +22,7 @@ export default function(input) {
     return input
         .map(numbersOnly)
         .map(firstAndLast)
-        .map(x => x.join(''))
+        .map(x => x.join(""))
         .map(Number)
         .reduce(sum, 0);
 }

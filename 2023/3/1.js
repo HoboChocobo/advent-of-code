@@ -19,7 +19,7 @@ export default function(input) {
             }
 
             if (numberStart != null && numberEnd != null) {
-                let number = Number(schematic[row].slice(numberStart, numberEnd + 1).join(''));
+                let number = Number(schematic[row].slice(numberStart, numberEnd + 1).join(""));
                 let isPartNumber = false;
                 for (let siftRow = row - 1; siftRow <= row + 1; siftRow++) {
                     for (let siftColumn = numberStart - 1; siftColumn <= numberEnd + 1; siftColumn++) {
