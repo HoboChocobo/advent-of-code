@@ -6,7 +6,8 @@ const PART_TEMPLATE = `export default function(input) {\n\n}`;
 
 async function getInput(year, day) {
     const res = await fetch(`https://adventofcode.com/${year}/day/${day}/input`, { headers: { "Cookie": COOKIE }});
-    return await res.text();
+    const text = await res.text();
+    return text.replace(/\n$/, "");
 }
 
 async function initializeDay(year, day) {

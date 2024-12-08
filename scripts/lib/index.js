@@ -35,3 +35,10 @@ export async function createDirectoryIfNotExists(path) {
     await fs.mkdir(path);
     console.log(`Created directory ${path}`);
 }
+
+export async function solve(year, day, part) {
+    const input = (await fs.readFile(`./${year}/${day}/input.txt`)).toString("utf-8").replaceAll("\r", "").split("\n");
+    const solver = (await import(`../../${year}/${day}/${part}.js`))?.default;
+    const solution = solver(input);
+    return solution;
+}

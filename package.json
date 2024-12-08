@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "initialize": "node scripts/initialize.js",
-    "solve": "node scripts/solve.js"
+    "solve": "node scripts/solve.js",
+    "submit": "node scripts/submit.js"
   },
   "author": "",
   "license": "ISC",
